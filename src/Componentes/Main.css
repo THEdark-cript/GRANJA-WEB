@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100vh;       /* ocupa toda a altura da tela */
-  padding-top: 80px;       /* espaço para não ficar escondido pelo Header fixed-top */
+  min-height: 100vh;       
+  padding-top: 80px;      
 }
 
 .carousel {
@@ -28,7 +28,7 @@
   justify-content: center;
   gap: 1.5rem;
   margin-top: 20px;
-  margin-bottom: 40px;     /* espaço antes do footer */
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 

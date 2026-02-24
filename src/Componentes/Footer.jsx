@@ -36,7 +36,7 @@ const Footer = () => {
         </Row>
         <Row className="mt-3">
           <Col className="text-center">
-            <p>© 2025 - Meu Projeto com React-Bootstrap</p>
+            <p>© 2026 - GRANJA-WEB</p>
           </Col>
         </Row>
       </Container>

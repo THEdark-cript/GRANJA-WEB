@@ -18,8 +18,8 @@ const Route1 = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // Dados fixos de exemplo (sem precisar importar dataset externo)
-  const instituicoesEnsinoDataSet = [
+  
+  const galpoesDataSet = [
     { nome: "Escola jujutsu", matriculas: 500, municipio: "Guarabira", estado: "PB" },
     { nome: "HOGWARTS", matriculas: 600, municipio: "mundo bruxo", estado: "PB" },
     { nome: "Cobra Kai", matriculas: 200, municipio: "vale de san", estado: "PB" }
@@ -33,7 +33,7 @@ const Route1 = () => {
           <Form>
             <Form.Group as={Row} className="mb-3">
               <Form.Label column sm="2">
-                Instituição Ensino
+               Galpões
               </Form.Label>
               <Col sm="10">
                 <Form.Control
@@ -54,37 +54,41 @@ const Route1 = () => {
         </Col>
       </Row>
 
-      {/* Tabela de instituições */}
+      {/* Tabela da Granja */}
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
-            <th>Instituição de Ensino</th>
-            <th>Matrículas</th>
-            <th>Cidade</th>
-            <th>Estado</th>
+            <th>Galpões</th>
+            <th>Quant-Frangos</th>
+            <th>Quant-Comedouros</th>
+            <th>Quant-Bebedouros</th>
+            <th>Quant-Ventiladores</th>
+            <th>Quant-Exaustoures</th>
+            <th>Quant-Responsaveis</th>
+            <th>Presença de termômetro de ambiente</th>
           </tr>
         </thead>
         <tbody>
-          {instituicoesEnsinoDataSet.map((instituicao, i) => (
+          {galpoesDataSet.map((galpao, i) => (
             <tr key={i}>
               <td>{i + 1}</td>
-              <td>{instituicao.nome}</td>
-              <td>{instituicao.matriculas}</td>
-              <td>{instituicao.municipio}</td>
-              <td>{instituicao.estado}</td>
+              <td>{galpao.nome}</td>
+              <td>{galpao.matriculas}</td>
+              <td>{galpao.municipio}</td>
+              <td>{galpao.estado}</td>
             </tr>
           ))}
         </tbody>
       </Table>
 
-      {/* Modal para adicionar instituição */}
+      {/* Modal para adicionar os Atributos da granja */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Adicionar Instituição</Modal.Title>
+          <Modal.Title>Adicionar Galpão</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Aqui você pode colocar o formulário para cadastrar uma nova instituição.
+          Aqui você pode colocar o formulário para cadastrar um novo galpão.
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
