@@ -9,20 +9,21 @@ const Footer = () => {
       <Container>
         <Row>
           <Col md={4}>
-            <h5>Company</h5>
+            <h5>Sobre a Granja</h5>
             <ul className="list-unstyled">
-              <li>Careers</li>
-              <li>News</li>
-              <li>Policies</li>
-              <li>Help</li>
+              <li>Historia da Granja</li>
+              <li>Missão e Valores</li>
+              <li>Equipe e Responsaveis</li>
+              <li>Contato</li>
             </ul>
           </Col>
           <Col md={4}>
-            <h5>Discover</h5>
+            <h5>Produtos</h5>
             <ul className="list-unstyled">
-              <li>Trust & Safety</li>
-              <li>Gift Cards</li>
-              <li>Business Travel</li>
+              <li>Ovos Caipiras</li>
+              <li>Fangos de Cortes</li>
+              <li>Rações Naturais</li>
+              <li>Serviços de Destribuição</li>
             </ul>
           </Col>
           <Col md={4}>

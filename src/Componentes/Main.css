@@ -4,7 +4,8 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;       
-  padding-top: 80px;      
+  padding-top: 80px; 
+  background-color:whitesmoke;     
 }
 
 .carousel {
@@ -47,7 +48,7 @@
 }
 
 .my-button {
-  background-color: aqua;
+  background-color: blue;
   font-weight: bold;
   width: 200px;
 }

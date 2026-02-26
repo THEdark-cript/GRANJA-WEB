@@ -5,25 +5,29 @@ import Carousel from 'react-bootstrap/Carousel';
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.png';
 import img3 from '../assets/img3.png';
+import img4 from '../assets/img4.png';
+import img5 from '../assets/img5.png';
+import img6 from '../assets/img6.png';
+import img7 from '../assets/img7.jpeg';
+import img8 from '../assets/img8.jpeg';
+import img9 from '../assets/img9.jpeg';
+
 import './Main.css';
 
-const imagens = [img1, img2, img3];
-
+const imagens = [img4, img5, img6];
+const imagensdinamicas = [img8, img7, img9];
 function Main() {
-  const [incremento, setIncremento] = useState(0);
   const [cardsDinamicos, setCardsDinamicos] = useState([]);
-
-  const incrementarHandleClick = () => {
-    setIncremento(incremento + 1);
-    console.log('clicou no botão! ' + (incremento + 1));
-  };
-
   const adicionarCard = () => {
+     if (cardsDinamicos.length < 3){
     const novoCard = {
       id: cardsDinamicos.length + 1,
-      img: imagens[cardsDinamicos.length % imagens.length],
+      img: imagensdinamicas[cardsDinamicos.length % imagensdinamicas.length],
     };
     setCardsDinamicos([...cardsDinamicos, novoCard]);
+   }else{
+    alert("Limite de 3 cards dinâmicos atingido!");
+    }
   };
 
   return (
@@ -81,18 +85,11 @@ function Main() {
       </div>
 
       {/* Botões */}
-      <div className="d-flex flex-column align-items-center mt-4">
-        <p>Incremento: {incremento}</p>
-
-        <Button className="my-button" onClick={incrementarHandleClick}>
-          Adicionar
-        </Button>
 
         <Button className="my-button mt-3" onClick={adicionarCard}>
-          Adicionar Card Dinâmico
+          Adicionar Donos da graja
         </Button>
       </div>
-    </div>
   );
 }
 
